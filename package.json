@@ -1,0 +1,61 @@
+{
+  "name": "snake-game-cpp",
+  "version": "1.0.0",
+  "description": "A classic and addictive Snake game implementation in C++ using SFML",
+  "main": "src/main.cpp",
+  "scripts": {
+    "build": "mkdir -p build && cd build && cmake .. && cmake --build . --config Release",
+    "build-windows": "if not exist build mkdir build && cd build && cmake .. && cmake --build . --config Release",
+    "clean": "rm -rf build",
+    "clean-windows": "if exist build rmdir /s /q build",
+    "install-deps": "echo 'Please install SFML 2.6 using your system package manager'",
+    "run": "cd build && ./SnakeGame",
+    "run-windows": "cd build && SnakeGame.exe",
+    "type-check": "tsc --noEmit",
+    "prebuild": "bun run type-check",
+    "postbuild": "node scripts/inject-console-capture.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/snake-game-cpp.git"
+  },
+  "keywords": [
+    "snake",
+    "game",
+    "cpp",
+    "sfml",
+    "arcade",
+    "classic",
+    "retro"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/snake-game-cpp/issues"
+  },
+  "homepage": "https://github.com/yourusername/snake-game-cpp#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "buildRequirements": {
+    "cmake": ">=3.10.0",
+    "compiler": "GCC 7+, Clang 5+, or MSVC 2017+",
+    "sfml": "2.6.x"
+  },
+  "systemDependencies": {
+    "ubuntu": "build-essential cmake libsfml-dev",
+    "macos": "cmake sfml (via Homebrew)",
+    "windows": "Visual Studio Build Tools, SFML 2.6"
+  }
+}

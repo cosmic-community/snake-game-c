@@ -1,0 +1,62 @@
+# .gitignore
+
+# Build directories
+build/
+Build/
+cmake-build-*/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled binaries
+*.exe
+*.out
+SnakeGame
+SnakeGame.exe
+
+# Visual Studio files
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+
+# Xcode files
+*.xcodeproj/
+*.xcworkspace/
+
+# Qt Creator files
+CMakeLists.txt.user*
+
+# Temporary files
+*~
+*.tmp
+*.temp
+
+# OS specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE specific files
+.vscode/
+.idea/
+*.cbp
+
+# Dependencies (if using vcpkg or similar)
+vcpkg_installed/
+packages/
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
