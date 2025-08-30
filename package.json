@@ -1,59 +1,40 @@
 {
-  "name": "snake-game-cpp",
+  "name": "snake-game-web",
   "version": "1.0.0",
-  "description": "A classic and addictive Snake game implementation in C++ using SFML",
-  "main": "src/main.cpp",
+  "description": "A classic and addictive Snake game implementation in HTML5 and JavaScript",
+  "main": "index.html",
   "scripts": {
-    "build": "mkdir -p build && cd build && cmake .. && cmake --build . --config Release",
-    "build-windows": "if not exist build mkdir build && cd build && cmake .. && cmake --build . --config Release",
-    "clean": "rm -rf build",
-    "clean-windows": "if exist build rmdir /s /q build",
-    "install-deps": "echo 'Please install SFML 2.6 using your system package manager'",
-    "run": "cd build && ./SnakeGame",
-    "run-windows": "cd build && SnakeGame.exe",
+    "dev": "serve .",
+    "build": "mkdir -p dist && cp -r *.html *.css *.js assets dist/ 2>/dev/null || cp *.html *.css *.js dist/",
+    "start": "serve dist",
     "postbuild": "node scripts/inject-console-capture.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/snake-game-cpp.git"
+    "url": "https://github.com/cosmic-community/snake-game-c.git"
   },
   "keywords": [
     "snake",
     "game",
-    "cpp",
-    "sfml",
+    "html5",
+    "javascript",
+    "canvas",
     "arcade",
     "classic",
-    "retro"
+    "retro",
+    "web-game"
   ],
-  "author": "Your Name",
+  "author": "Cosmic Community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/snake-game-cpp/issues"
+    "url": "https://github.com/cosmic-community/snake-game-c/issues"
   },
-  "homepage": "https://github.com/yourusername/snake-game-cpp#readme",
+  "homepage": "https://github.com/cosmic-community/snake-game-c#readme",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
   "engines": {
     "node": ">=14.0.0"
-  },
-  "os": [
-    "win32",
-    "darwin",
-    "linux"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ],
-  "buildRequirements": {
-    "cmake": ">=3.10.0",
-    "compiler": "GCC 7+, Clang 5+, or MSVC 2017+",
-    "sfml": "2.6.x"
-  },
-  "systemDependencies": {
-    "ubuntu": "build-essential cmake libsfml-dev",
-    "macos": "cmake sfml (via Homebrew)",
-    "windows": "Visual Studio Build Tools, SFML 2.6"
   }
 }

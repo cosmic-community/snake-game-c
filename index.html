@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🐍 Snake Game</h1>
+            <div class="score-container">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="gameOverScreen" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="restart-btn">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h3>Controls</h3>
+            <div class="control-grid">
+                <div class="control-item">
+                    <span class="key">↑</span>
+                    <span class="action">Move Up</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">↓</span>
+                    <span class="action">Move Down</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">←</span>
+                    <span class="action">Move Left</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">→</span>
+                    <span class="action">Move Right</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">Space</span>
+                    <span class="action">Pause/Resume</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mobile-controls">
+            <div class="d-pad">
+                <button class="d-pad-btn up" data-direction="up">↑</button>
+                <div class="d-pad-middle">
+                    <button class="d-pad-btn left" data-direction="left">←</button>
+                    <button class="d-pad-btn pause" id="pauseBtn">⏸️</button>
+                    <button class="d-pad-btn right" data-direction="right">→</button>
+                </div>
+                <button class="d-pad-btn down" data-direction="down">↓</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/dashboard-console-capture.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
