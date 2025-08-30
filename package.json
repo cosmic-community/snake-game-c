@@ -11,8 +11,6 @@
     "install-deps": "echo 'Please install SFML 2.6 using your system package manager'",
     "run": "cd build && ./SnakeGame",
     "run-windows": "cd build && SnakeGame.exe",
-    "type-check": "tsc --noEmit",
-    "prebuild": "bun run type-check",
     "postbuild": "node scripts/inject-console-capture.js"
   },
   "repository": {
