@@ -32,7 +32,8 @@
   "homepage": "https://github.com/cosmic-community/snake-game-c#readme",
   "dependencies": {},
   "devDependencies": {
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "glob": "^10.3.10"
   },
   "engines": {
     "node": ">=14.0.0"
